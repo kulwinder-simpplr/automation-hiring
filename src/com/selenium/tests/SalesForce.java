@@ -14,7 +14,7 @@ public class SalesForce extends BaseTest {
 	
 	@Test
 	public void launchSalesforce() {
-		System.out.println("Launching!");
+		System.out.println("Reached test page.");
 	}
 	
 }
