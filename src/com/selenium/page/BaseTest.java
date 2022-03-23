@@ -22,9 +22,8 @@ public class BaseTest {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/driver/chromedriver.exe");
 		driver = new ChromeDriver(chromeoptions());
 		driver.manage().window().maximize();
-		loginIntoSF();
 		System.out.println("Routing to : " + url);
-		driver.get(url);
+		loginIntoSF();
 		waitForElementPresence("//h1");
 	}
 
@@ -69,8 +68,7 @@ public class BaseTest {
 			String txtbox_username = "//*[@id='username']";
 			String txtbox_password = "//*[@id='password']";
 			String btn_login = "//*[@id='Login']";
-			System.out.println("Logging In.");
-			driver.get("https://login.salesforce.com");
+			driver.get(url);
 			waitForElementPresence(txtbox_username);
 			driver.findElement(By.xpath(txtbox_username)).sendKeys(cred.split("%")[0]);
 			driver.findElement(By.xpath(txtbox_password)).sendKeys(cred.split("%")[1]);
