@@ -73,7 +73,6 @@ public class BaseTest {
 			driver.findElement(By.xpath(txtbox_username)).sendKeys(cred.split("%")[0]);
 			driver.findElement(By.xpath(txtbox_password)).sendKeys(cred.split("%")[1]);
 			driver.findElement(By.xpath(btn_login)).click();
-			waitForHomeURL();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
